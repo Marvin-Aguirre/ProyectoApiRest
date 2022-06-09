@@ -40,7 +40,7 @@ public class LoginController {
 	    	if(Objects.nonNull(oauthUser)) 
 	    	{	
 	  
-	    		return "redirect:/inventary";
+	    		return "redirect:/home";
 	    	
 	    		
 	    	} else {
@@ -59,6 +59,4 @@ public class LoginController {
 	        return "redirect:/login";
 	    }
 
-	
-	
 }
