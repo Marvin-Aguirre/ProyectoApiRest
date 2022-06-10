@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div align="center">
+		<br>
+		<h1>Compras</h1>
+		<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+			class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+		</svg>
+		<br>
+		<tr>
+		</tr>
+		<tr>
+		
+		<div class="row g-3 align-items-center">
+			<div class="col-auto">
+				<label for="inputPassword6" class="col-form-label">Codigo de producto: </label>
+			</div>
+			<div class="col-auto">
+				<input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+			</div>
+			<div class="col-auto">
+				<span id="passwordHelpInline" class="form-text">
+				</span>
+			</div>
+			<div class="col-auto">
+				<label for="inputPassword6" class="col-form-label">Cantidad: </label>
+			</div>
+			<div class="col-auto">
+				<input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+			</div>
+			<h5><a th:href="@{'/new'}" class="container p-3 my-3 bg-primary text-white">Agregar producto</a></h5>
+			<br>
+			<br>
+		</div>
+		
+		<br>
+		<br>
+
+			<div class="col-sm-8" align="center">
+				<div class="panel-body" align="center">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+								<th>ID PRODUCTO</th>
+								<th>CODIGO DEL PRODUCTO</th>
+								<th>NOMBRE DEL PRODUCTO</th>
+								<th>CANTIDAD</th>
+								<th>PRECIO UNITARIO</th>
+								<th>SUBTOTAL</th>
+								<th>Edit</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="Producto : ${liststudent }">
+								<td th:text="${Producto.id}">ID PRODUCTO</td>
+								<td th:text="${Producto.codProduct}">CODIGO DEL PRODUCTO</td>
+								<td th:text="${Producto.productName}">NOMBRE DEL PRODUCTO</td>
+								<td th:text="${Producto.cantproduct}">CANTIDAD</td>
+								<td th:text="${Producto.precio}">PRECIO UNITARIO</td>
+								<td th:text="${Producto.subtotal}">SUBTOTAL</td>
+								<td>
+									<a th:href="@{'/edit/' + ${Producto.id}}">Edit</a>
+								</td>
+								<td>
+									<a th:href="@{'/delete/' + ${Producto.id}}">Delete</a>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+
+		</tr>
+		<br>
+		<br>
+		<div align="center">
+			
+		</div>
+		</tbody>
+		</table>
+		<div>
+		<h3><a  th:href="@{'/home'}" class="container p-3 my-3 bg-primary text-white">Pagina de Inicio</a></h3>     
+</body>
+
+</html>
