@@ -15,7 +15,6 @@ public class Producto {
     private Long cantproduct;
     private int precio;
     
-    
     public Producto() {
 
 	}
