@@ -51,5 +51,4 @@ public class IniciarSesion {
 		this.password = password;
 	}
 
-	
 }
