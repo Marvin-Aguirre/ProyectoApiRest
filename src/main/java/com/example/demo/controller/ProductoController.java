@@ -33,7 +33,7 @@ public class ProductoController {
         model.addAttribute("liststudent", liststudent);
         System.out.print("Get / ");	
         return "index";
-    }
+    }	
 
     @GetMapping("/new")
     public String add(Model model) {
