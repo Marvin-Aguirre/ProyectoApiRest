@@ -40,13 +40,12 @@ public class LoginController {
 	    	if(Objects.nonNull(oauthUser)) 
 	    	{	
 	  
-	    		return "redirect:/inventary";
+	    		return "redirect:/home";
 	    	
 	    		
 	    	} else {
 	    		return "redirect:/login";
 	    		
-	    	
 	    	}
 
 	}
@@ -54,11 +53,8 @@ public class LoginController {
 	    @RequestMapping(value = {"/logout"}, method = RequestMethod.POST)
 	    public String logoutDo(HttpServletRequest request,HttpServletResponse response)
 	    {
-	    	
 		  
 	        return "redirect:/login";
 	    }
 
-	
-	
 }

@@ -18,6 +18,14 @@ import com.example.demo.service.productoService;
 public class ProductoController {
 	@Autowired
     private productoService service;
+	
+	@GetMapping("/home")
+    public String viewHome(Model model) {
+        List<Producto> liststudent = service.listAll();
+        model.addAttribute("liststudent", liststudent);
+        System.out.print("Get / ");	
+        return "home";
+    }
 
     @GetMapping("/inventary")
     public String viewHomePage(Model model) {
@@ -25,7 +33,7 @@ public class ProductoController {
         model.addAttribute("liststudent", liststudent);
         System.out.print("Get / ");	
         return "index";
-    }
+    }	
 
     @GetMapping("/new")
     public String add(Model model) {
