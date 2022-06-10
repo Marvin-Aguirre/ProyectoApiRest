@@ -20,10 +20,7 @@ public class ProductoController {
     private productoService service;
 	
 	@GetMapping("/home")
-    public String viewHome(Model model) {
-        List<Producto> liststudent = service.listAll();
-        model.addAttribute("liststudent", liststudent);
-        System.out.print("Get / ");	
+    public String viewHome(Model model) {	
         return "home";
     }
 

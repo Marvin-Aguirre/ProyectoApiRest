@@ -24,6 +24,7 @@ public class productoService {
     public Producto get(long id) {
         return repo.findById(id).get();
     }
+    
      
     public void delete(long id) {
         repo.deleteById(id);
