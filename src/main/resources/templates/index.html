@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+	<title>Inventario</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
@@ -50,10 +51,10 @@
 								<td th:text="${Producto.cantproduct}">CANTIDAD</td>
 								<td th:text="${Producto.precio}">PRECIO</td>
 								<td>
-									<a th:href="@{'/edit/' + ${Producto.id}}">Edit</a>
+									<a th:href="@{'/edit/' + ${Producto.id}}">Editar</a>
 								</td>
 								<td>
-									<a th:href="@{'/delete/' + ${Producto.id}}">Delete</a>
+									<a th:href="@{'/delete/' + ${Producto.id}}">Eliminar</a>
 								</td>
 							</tr>
 
@@ -68,7 +69,7 @@
 		<br>
 		<br>
 		<div align="center">
-			<h3><a th:href="@{'/new'}" class="container p-3 my-3 bg-primary text-white">Add new Product</a></h3>
+			<h3><a th:href="@{'/new'}" class="container p-3 my-3 bg-primary text-white">Añadir producto</a></h3>
 			<br>
 			<br>
 			<h3><a th:href="@{'/home'}" class="container p-3 my-3 bg-primary text-white">Página de inicio</a></h3>
